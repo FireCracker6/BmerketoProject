@@ -6,6 +6,7 @@
 
         @include lg {
             display: flex;
+            justify-content: center;
         }
         
     }
@@ -26,6 +27,9 @@
     }
     ._breadcrumbs {
         display: block;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
     }
     ._cards {
         display: grid;
@@ -33,53 +37,80 @@
         justify-content: center;
 
         @include lg {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+      
+            grid-column-gap: 20px; // Adjust the space between cards as needed
             justify-content: space-between;
-            border: 1px solid black;
             width: 100%;
             
         }
       
     }
     .card {
-        border: none;
-        font-family: $font-poppins;
-        
-      margin: 0;
-
+      border: none;
+      font-family: $font-poppins;
+      position: relative;
+      margin: 0 0 20px;
+    
       @include lg {
-       display: flex;
-        
+        display: flex;
       }
-        .card-image {
-            display: inline-block;
-           padding: 5px;
-           
-           @include lg {
-           margin-inline-end: 10px;
-           }
-            img {
-              
-          
-                width: 100%;
-                height: auto;
-             
-            }
+    
+      &:hover {
+        .shopping-cart-icon {
+          display: inline;
 
-    }
-    .card-title {
-     
-        margin: -15px 0 -0 -10px !important;
        
-        font-size: 15px;
+        }
+       
+      }
+    
+      .card-image {
+        display: inline-block;
+        padding: 5px;
+        @include md {
+          padding: 5px;
+        }
+        @include lg {
+          padding: 0;
+        }
+   
+    
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    
+      .shopping-cart-icon {
+        display: none;
+        position: absolute;
+        font-size: 24px;
+        bottom: 15px;
+        right: 15px;
+
+        @include md {
+          display: none;
+        }
+
+      }
+    
+      .card-title {
+        margin: -10px 0 -0 -10px !important;
+        font-size: 18px;
         color: $color-dark-1;
-    }
-    .card-price {
-       
-        margin: 5px  0 0 -10px !important;
-        font-size: 12px;
+      }
+    
+      .card-price {
+        margin: 5px 0 0 -10px !important;
+        font-size: 14px;
         color: $color-dark-2;
-       
+      }
+      @include mobile {
+        &:hover .shopping-cart-icon {
+          display: none;
+        }
+      }
     }
-}
-}
+  }    

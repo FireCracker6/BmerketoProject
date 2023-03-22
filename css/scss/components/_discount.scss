@@ -1,0 +1,133 @@
+._discount {
+    background-color: $color-theme-2;
+    .container {
+        display: block;
+      
+        justify-content: center;
+      
+
+        @include lg {
+            display: flex;
+            justify-content: center;
+        }
+        
+      
+    }
+    ._cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+
+        @include lg {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+      
+           gap: 30px; // Adjust the space between cards as needed
+            justify-content: space-between;
+         
+            
+        }
+      
+    }
+    .card {
+        display: none;
+        border: none;
+        font-family: $font-poppins;
+    
+        margin: 0 0 20px;
+        background-color: $color-white;
+     
+
+        @include lg {
+          display: grid;
+         
+        }
+        h5 {
+        
+            font-size: 18px;
+        }
+        h4 {
+            margin-top: 30px;
+            font-size: 14px;
+        }
+    }
+    
+    .card-image {
+        display: inline-block;
+        padding: 5px;
+        @include md {
+          padding: 5px;
+        }
+        @include lg {
+          padding: 0;
+        }
+   
+    
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .discount-card {
+       
+    display: block;
+   // margin: 5px;
+    grid-column: 1 / -1;
+    border: 1px solid black;
+    margin: 0 !important;
+
+    background-color: $color-white;
+    @include lg {
+        grid-column: 2 /2;
+        padding: 0;
+        margin-bottom: 20px !important;
+    }
+       
+
+        h5 {
+            margin-top: 80px;
+            text-align: center;
+            color: $color-theme-1;
+            font-weight: $font-weight-bold;
+            font-size: 18px;
+            margin-bottom: 20px !important;
+         
+        }
+        h1 {
+            font-family:$font-playfair;
+            font-weight: $font-weight-bold;
+            text-align: center;
+           font-size: 48px;
+           margin-bottom: 20px !important;
+           
+         
+        }
+        h3 {
+            font-family: $font-poppins;
+            font-weight: $font-weight-bold;
+            font-size: 14px;
+            text-align: center;
+            margin: 0 !important;
+           
+         
+        }
+       .bText {
+           display: block;
+            justify-content: center;
+            align-items: center;
+           text-align: center;
+          padding: 20px  40px 0 40px;
+            margin-bottom: 50px;
+            font-size: 14px;
+          
+            
+        } 
+        .card-body {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            font-size: 12px;
+        }
+      }
+}

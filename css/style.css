@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 /* * {
     margin: 0;
     padding: 0;
@@ -34,6 +34,10 @@ button {
 button:hover {
   background-color: #000000;
   color: #ffffff;
+}
+
+.btn-white {
+  font-weight: 400;
 }
 
 header {
@@ -253,6 +257,9 @@ header .btn-toggle {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 ._collection ._header {
@@ -274,6 +281,9 @@ header .btn-toggle {
 }
 ._collection ._breadcrumbs {
   display: block;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
 }
 ._collection ._cards {
   display: grid;
@@ -284,18 +294,20 @@ header .btn-toggle {
 }
 @media (min-width: 992px) {
   ._collection ._cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    border: 1px solid black;
     width: 100%;
   }
 }
 ._collection .card {
   border: none;
   font-family: "Poppins", sans-serif;
-  margin: 0;
+  position: relative;
+  margin: 0 0 20px;
 }
 @media (min-width: 992px) {
   ._collection .card {
@@ -304,27 +316,282 @@ header .btn-toggle {
     display: flex;
   }
 }
+._collection .card:hover .shopping-cart-icon {
+  display: inline;
+}
 ._collection .card .card-image {
   display: inline-block;
   padding: 5px;
 }
+@media (min-width: 768px) {
+  ._collection .card .card-image {
+    padding: 5px;
+  }
+}
 @media (min-width: 992px) {
   ._collection .card .card-image {
-    -webkit-margin-end: 10px;
-            margin-inline-end: 10px;
+    padding: 0;
   }
 }
 ._collection .card .card-image img {
   width: 100%;
   height: auto;
 }
+._collection .card .shopping-cart-icon {
+  display: none;
+  position: absolute;
+  font-size: 24px;
+  bottom: 15px;
+  right: 15px;
+}
+@media (min-width: 768px) {
+  ._collection .card .shopping-cart-icon {
+    display: none;
+  }
+}
 ._collection .card .card-title {
-  margin: -15px 0 0 -10px !important;
-  font-size: 15px;
+  margin: -10px 0 0 -10px !important;
+  font-size: 18px;
   color: #000000;
 }
 ._collection .card .card-price {
   margin: 5px 0 0 -10px !important;
-  font-size: 12px;
+  font-size: 14px;
   color: #292929;
+}
+@media (max-width: 767px) {
+  ._collection .card:hover .shopping-cart-icon {
+    display: none;
+  }
+}
+
+._discount {
+  background-color: #FAEFEF;
+}
+._discount .container {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 992px) {
+  ._discount .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+._discount ._cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 992px) {
+  ._discount ._cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+._discount .card {
+  display: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 20px;
+  background-color: #ffffff;
+}
+@media (min-width: 992px) {
+  ._discount .card {
+    display: grid;
+  }
+}
+._discount .card h5 {
+  font-size: 18px;
+}
+._discount .card h4 {
+  margin-top: 30px;
+  font-size: 14px;
+}
+._discount .card-image {
+  display: inline-block;
+  padding: 5px;
+}
+@media (min-width: 768px) {
+  ._discount .card-image {
+    padding: 5px;
+  }
+}
+@media (min-width: 992px) {
+  ._discount .card-image {
+    padding: 0;
+  }
+}
+._discount .card-image img {
+  width: 100%;
+  height: auto;
+}
+._discount .discount-card {
+  display: block;
+  grid-column: 1/-1;
+  border: 1px solid black;
+  margin: 0 !important;
+  background-color: #ffffff;
+}
+@media (min-width: 992px) {
+  ._discount .discount-card {
+    grid-column: 2/2;
+    padding: 0;
+    margin-bottom: 20px !important;
+  }
+}
+._discount .discount-card h5 {
+  margin-top: 80px;
+  text-align: center;
+  color: #FA3150;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px !important;
+}
+._discount .discount-card h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 20px !important;
+}
+._discount .discount-card h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 !important;
+}
+._discount .discount-card .bText {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 20px 40px 0 40px;
+  margin-bottom: 50px;
+  font-size: 14px;
+}
+._discount .discount-card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  font-size: 12px;
+}
+
+._topSelling {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+._topSelling ._header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  font-size: 30px;
+  font-weight: 600;
+}
+._topSelling .container {
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  border: none;
+  gap: 20px;
+}
+@media (min-width: 992px) {
+  ._topSelling .container {
+    max-width: 1390px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-flow: column;
+  }
+}
+._topSelling .card {
+  border: none;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  margin: 0 0 20px;
+}
+@media (min-width: 992px) {
+  ._topSelling .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+._topSelling .card:hover .shopping-cart-icon {
+  display: inline;
+}
+._topSelling .card-image {
+  display: inline-block;
+  padding: 5px;
+}
+@media (min-width: 768px) {
+  ._topSelling .card-image {
+    padding: 5px;
+  }
+}
+@media (min-width: 992px) {
+  ._topSelling .card-image {
+    padding: 0;
+  }
+}
+._topSelling .card-image img {
+  width: 100%;
+  height: auto;
+}
+._topSelling .shopping-cart-icon {
+  display: none;
+  position: absolute;
+  font-size: 24px;
+  bottom: 15px;
+  right: 15px;
+}
+@media (min-width: 768px) {
+  ._topSelling .shopping-cart-icon {
+    display: none;
+  }
+}
+._topSelling .card-title {
+  margin: -10px 0 0 -10px !important;
+  font-size: 15px;
+  color: #000000;
+}
+._topSelling .card-price {
+  margin: 5px 0 0 -10px !important;
+  font-size: 14px;
+  color: #292929;
+}
+@media (max-width: 767px) {
+  ._topSelling:hover .shopping-cart-icon {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
