@@ -10,7 +10,7 @@
         font-size: 30px;
         font-weight: $font-weight-semibold;
     }
-    .container {
+    .content {
        
         display: grid;
         justify-content: center;
@@ -89,5 +89,13 @@
           display: none;
         }
       }
+      ._bDiscount {
+        margin-top: 60px;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 20px;
+        justify-content: center;
+        border: 1px solid black;
+    }
     }
 

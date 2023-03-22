@@ -1,0 +1,43 @@
+.subscribe {
+    background-color: $color-dark-4;
+    padding: 60px;
+    .container {
+        background-color: $color-white;
+        display: flex;
+        justify-content: center;
+        padding: 120px;
+        position: relative;
+    }
+    .mail-text {
+      position: absolute;
+      left: 280px;
+      bottom: 90px;
+      margin: auto;
+        width: 800px;
+        padding: 20px;
+        border: none;
+        border-radius: 40px;
+        border-top: 1px solid $color-dark-4;
+        border-bottom: 1px solid $color-dark-4;
+        border-left: 1px solid $color-dark-4;
+    }
+    .s_button {
+        padding: 20px;
+        bottom: 90px;
+        position: absolute;
+       right: 240px;
+       display: block;
+        margin-left: -100px;
+        background-color: $color-theme-1;
+        color: $color-white;
+      border:none;
+        border-radius: 40px;
+        font-size: 1.1em;
+        font-family: $font-poppins;
+
+        &:hover {
+            background-color: $color-dark-2;
+            transition: all 0.5s;
+        }
+    }
+}

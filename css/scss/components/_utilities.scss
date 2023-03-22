@@ -38,4 +38,14 @@ button {
 .btn-white {
 font-weight: $font-weight-regular;
 }
+.btn-arrow-white {
+    border: 1px solid $color-dark-2;
+    font-weight: $font-weight-regular;
+    border-radius:5px;
+    &:hover {
+        background-color: $color-dark-1;
+        color: $color-white;
+    }
+    }
+      
   

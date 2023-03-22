@@ -74,7 +74,7 @@
     display: block;
    // margin: 5px;
     grid-column: 1 / -1;
-    border: 1px solid black;
+  //  border: 1px solid black;
     margin: 0 !important;
 
     background-color: $color-white;
@@ -129,5 +129,7 @@
             width: 100%;
             font-size: 12px;
         }
+      
+      
       }
 }
