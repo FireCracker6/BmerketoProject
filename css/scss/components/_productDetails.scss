@@ -1,0 +1,179 @@
+.product-detail-section {
+   // display: block;
+    //justify-content: center;
+
+    .container {
+        display: block;
+        justify-content: center;
+
+        @include lg {
+            display: flex;
+            justify-content: center;
+         
+        }
+    }
+    .grid-container {
+        display: flex;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+       
+        
+        
+    }
+    .product-detail-description {
+        margin-top: 25px;
+
+        @include lg {
+            margin-left: 70px;
+            max-width: 500px;
+        }
+        h2 {
+            font-family: $font-poppins;
+            font-size: 24px;
+            color:$color-dark-2;
+        }
+        h3 {
+            font-family: $font-poppins;
+            font-size: 24px;
+            color:$color-dark-2;
+            font-weight: $font-weight-semibold;
+        }
+
+        .text-theme {
+            color: $color-yellow;
+            span {
+                color: $color-dark-3;
+            }
+        }
+       
+          
+        
+
+        .item-3 {
+            display: inline-flex;
+             justify-content: center;
+             font-size: 0.84rem;
+             font-family: $font-poppins;
+            .quantity-group{
+               display: inline-flex;
+               justify-content: center;
+           .qbtn {
+        
+            border: 1px solid $color-dark-4;
+            color: $color-dark-2;
+          
+            &:hover {
+                color: $color-white;
+            }
+           }
+           
+            } 
+            .q-text {
+               
+                width: 50px;
+                justify-content: center;
+                text-align: center;
+                border: none;
+                border-top: 1px solid $color-dark-4;
+                border-bottom: 1px solid $color-dark-4;
+                
+                background-color: $color-white;
+                color: $color-dark-2;
+               }
+
+               .cart-red-buttons {
+                color: $color-white;
+                border: 1px solid $color-theme-1;
+                &:hover {
+                
+                    border: 1px solid$color-dark-2;
+                }
+                .post-button {
+                    background-color: $color-theme-1;
+                    color: $color-white;
+                 
+                    border: none;
+
+                    &:hover {
+                        background-color: $color-dark-2;
+                      
+                    }
+                }
+               }
+            
+        }
+        .item-4 {
+            .color {
+                margin-top: 20px;
+                display: flex;
+                letter-spacing: 5px;
+                list-style-type: none;
+                
+
+            
+                    div:nth-of-type(1)  {
+                        color: $color-theme-1;
+                    }
+                    div:nth-child(2) {
+                        color: $color-yellow;
+                    }
+                    div:nth-child(3) {
+                        color: $color-green;
+                    }
+              
+                .sku {
+                    margin-left: 20px;
+                    letter-spacing: 0;
+                }
+                
+            }
+            .cart-wishlist {
+                margin-top: 30px;
+               
+                .wish-button {
+                    border: 1px solid $color-dark-4;
+                }
+            }
+            .category {
+                margin-top: 20px;
+            }
+        }
+    }
+    .prod-images {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 15px;
+
+        .item-1 {
+            grid-row: 1 /1;
+            grid-column: 1 /-1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                -o-object-fit: cover;
+                   object-fit: cover;
+            }
+        }
+        .item-2, .item-3, .item-4, .item-5 {
+            grid-row: 2 /2;
+          
+            img {
+                width: 100%;
+                height: 100%;
+                -o-object-fit: cover;
+                   object-fit: cover;
+            }
+        }
+      
+    }
+    .share {
+        display: block;
+
+        .social {
+            display: flex;
+        }
+    }
+}

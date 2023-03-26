@@ -78,6 +78,16 @@
         font-size: 15px;
         color: $color-dark-1;
       }
+      .card-body {
+        p {
+          display: none;
+        }
+        @include lg {
+          p {
+            display: block;
+          }
+        }
+      }
     
       .card-price {
         margin: 5px 0 0 -10px !important;
