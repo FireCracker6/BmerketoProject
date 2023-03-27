@@ -1,33 +1,32 @@
-.product-detail-section {
-   // display: block;
-    //justify-content: center;
+.no-gutters {
+    --bs-gutter-x: 0 !important;
+  }
+  .product-detail-section {
+   display: block;
+    justify-content: center;
 
     .container {
         display: block;
         justify-content: center;
 
         @include lg {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-between;
+        
          
         }
     }
     .grid-container {
         display: flex;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-
-       
-        
+        margin: 0;
+   
         
     }
     .product-detail-description {
         margin-top: 25px;
 
-        @include lg {
-            margin-left: 70px;
-            max-width: 500px;
-        }
+      
         h2 {
             font-family: $font-poppins;
             font-size: 24px;
@@ -39,7 +38,9 @@
             color:$color-dark-2;
             font-weight: $font-weight-semibold;
         }
-
+        p {
+            max-width: 500px;
+        }
         .text-theme {
             color: $color-yellow;
             span {
@@ -174,6 +175,281 @@
 
         .social {
             display: flex;
+        }
+    }
+}
+
+/* Product Details Info Section */
+.productDetail-Info {
+    display: block;
+    justify-content: center;
+   
+
+    @include lg {
+        display: flex;
+      //  justify-content: center;
+    }
+
+    
+    .container {
+    
+        display: block;
+       // justify-content: center;
+       .tab-content {
+        h5 {
+            margin-top: 20px;
+        }
+      
+    }
+
+        @include lg {
+            display: block;
+          
+            justify-content: space-between;
+
+          
+         
+        }
+     
+    
+        }
+        nav {
+            margin-top: 20px;
+          
+            .nav {
+              display: flex;
+             
+              @include lg {
+                justify-content: space-between;
+              }
+            }
+            .nav-link {
+             
+                border-top: 1px solid $color-dark-4;
+                border-bottom: 1px solid $color-dark-4;
+                border-left: 1px solid $color-dark-4;
+                text-align: center;
+
+                @include lg {
+                    border-radius: 0;
+                flex-grow: 1;
+                    
+                }
+                &:active,
+                &:focus,
+                &.active-tab,
+                &.active {
+                  background-color: red;
+                  color: $color-white;
+                }
+
+            color: black;
+             
+             &:hover {
+                background-color: $color-dark-1;
+                color: $color-dark-4;
+             }
+           
+           
+            
+          
+            }
+               button:nth-child(2), button:nth-child(4) {
+                display: none;
+               }
+
+               @include lg {
+                button:nth-child(2), button:nth-child(4) {
+                    display: block;
+                  
+                   }
+                   button:nth-child(3) {
+                    border-right: none;
+                }
+               }
+
+               button:nth-child(3) {
+                border-right: 1px solid $color-dark-4;
+            }
+            button:nth-child(4) {
+                border-right: 1px solid $color-dark-4;
+            }
+            }
+      
+        .product-content-info {
+            display: grid;
+            justify-content: space-between;
+         
+            @include lg {
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: space-between;
+            }
+
+            .product-info-image {
+               
+                padding: 20px;
+                img {
+                  
+                    display: none;
+
+                    @include lg {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+/* end Product Details Info Section */
+
+/* Related Products Section */
+._relatedProducts {
+    display: block;
+    justify-content: center;
+
+    @include lg {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        display: block;
+      justify-content: center;
+
+        @include lg {
+            display: block;
+        }
+    }
+    .header {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        border-top: 1px solid $color-dark-4;
+       
+        h5 {
+            margin-top: 30px;
+            text-align: left;
+        }
+    }
+    ._cards {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .card {
+        border: none;
+        font-family: $font-poppins;
+        position: relative;
+        margin: 0 0 20px;
+      
+        @include lg {
+            display: flex;
+          }
+        
+          &:hover {
+            .shopping-cart-icon {
+              display: inline;
+    
+           
+            }
+           
+          }
+    }
+    .card-image {
+        display: inline-block;
+        padding: 5px;
+        @include md {
+          padding: 5px;
+        }
+        @include lg {
+          padding: 0;
+        }
+   
+    
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .shopping-cart-icon {
+        display: none;
+        position: absolute;
+        font-size: 24px;
+        bottom: 15px;
+        right: 15px;
+
+        @include md {
+          display: none;
+        }
+
+      }
+    
+      .card-title {
+        margin: -10px 0 -0 -10px !important;
+        font-size: 15px;
+        color: $color-dark-1;
+      }
+      .card-body {
+        p {
+          display: none;
+        }
+        @include lg {
+          p {
+            display: block;
+          }
+        }
+      }
+    
+      .card-price {
+        margin: 5px 0 0 -10px !important;
+        font-size: 14px;
+        color: $color-dark-2;
+      }
+      @include mobile {
+        &:hover .shopping-cart-icon {
+          display: none;
+        }
+      }
+
+     
+}
+
+/* End Related Products Section */
+
+.small_cards {
+    display: block;
+
+    @include lg {
+        display: flex;
+
+    }
+
+    .container {
+       
+        display: flex;
+        background-color: $color-dark-5;
+        
+        @include lg {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            height: 285px;
+        }
+
+        .card {
+            border: none;
+            margin: 0;
+            padding: 20px;
+            background-color: $color-dark-5;
+     
+            img {
+                width: 100%;
+                height: auto;
+                border: none;
+                border-radius: 0;
+            }
         }
     }
 }
