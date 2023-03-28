@@ -12,12 +12,12 @@
 <body>
     <!-- start header  -->
     <header >
-        <div class="container" style="display: none;">
+        <div class="container">
     <div class="logo" > <img class="logo" src="images/logo.svg" alt="logo"></div>
-        <div id="menu">
-            <nav class="menu-links">
+      
+            <nav id="menu" class="menu-links">
                 <a class="link" href="#">HOME</a>
-                <a class="link" href="#">PRODUCTS</a>
+                <a class="link" href="productDetails.html">PRODUCTS</a>
                 <a class="link" href="#">CONTACT</a>
             </nav>
             <nav class="menu-icons">
@@ -25,14 +25,18 @@
                 <a class="link" href="#">Login</a>
                 <a class="link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
             </nav>
-        </div>
-        <button class="btn-toggle btn-white"><i class="fa-regular fa-bars"></i></button>
+       
+        <div class="toggle">
+          <button class="btn-toggle btn-outline-white" data-option="toggle" data-target="#menu">
+              <i id="icon" class="fa-regular fa-bars"></i>
+          </button>
+      </div>
     </div>
     </header>
       <!-- end header  -->
 
       <!-- showcase start -->
-      <section class="showcase" style="display: none;">
+      <section class="showcase">
         <div class="container">
             <div class="content">
                 <div class="ingress">WELCOME TO BMARKETO SHOP</div>
@@ -52,12 +56,12 @@
       <!-- showcase end -->
 
       <!-- start best collection -->
-      <section class="_collection" style="display: none;" >
+      <section class="_collection" >
        <div class="container">
         <div class="_header">Best Collection</div>
     </div>
         <div class="container">
-        <div class="_breadcrumbs">All   ⁄   Bags   ⁄   Dress   ⁄   Decoration   ⁄   Essentials   ⁄   Interior   ⁄   Laptop   ⁄   Mobile   ⁄   Beauty</div>
+        <div class="_breadcrumbs">All   /   Bags   /   Dress   /   Decoration  /   Essentials  /   Interior   /   Laptop   /   Mobile   /   Beauty</div>
     </div>
         <div class="container">
         <div class="_cards">
@@ -193,7 +197,7 @@
 
 
 <!-- start discount section -->
-<section class="_discount" style="display: none;">
+<section class="_discount">
 
 <div class="container">
 <div class="_cards">
@@ -207,26 +211,30 @@
       
           <div class="shopping-cart-icon">
             <h5 class="card-title">Table Lamp - scelerisque tempore</h5>
-            <h4 class="card-price">€30:00</h4>
+            <button><h4 class="card-oldprice">€30:00</h4>
+              <h4 class="card-price">€30:00</h4>      
+              <i class="fa-regular fa-cart-plus"></i>
+          </button>
           
           </div>
           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
       </div>
-
-      
-        <div class="discount-card">
-         <h5>UP TO SELL</h5>
+      <div class="dcard">
+        <div class="dcard-content">
+        <h5>UP TO SELL</h5>
          <h1>50% OFF</h1>
          <h3>Get The Best Price</h3>
       <div class="bText">Get the best daily offer et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea taki</div>
-
+    </div>
         
          <div class="card-body">
       <button>Discover More</button> 
            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
          </div>
-        </div>
+      </div>
+
+     
 
 
       <div class="card">
@@ -238,8 +246,9 @@
       
           <div class="shopping-cart-icon">
             <h5 class="card-title">Table Lamp - scelerisque tempore</h5>
-            <button class="btn-white" style="display: flex; justify-content: space-between;"><h4 class="card-oldprice">€30:00</h4>
-                <h4 class="card-price">€30:00</h4>      <i class="fa-regular fa-cart-plus"></i>
+            <button><h4 class="card-oldprice">€30:00</h4>
+                <h4 class="card-price">€30:00</h4>      
+                <i class="fa-regular fa-cart-plus"></i>
             </button>
             
          
@@ -351,35 +360,24 @@
   <div style="margin-top: 10px; display: flex; justify-content: center;"> <button class="btn btn-arrow-white"><i class="fa-thin fa-chevron-left"></i></button>&nbsp;<button class="btn btn-arrow-white"><i class="fa-thin fa-chevron-right"></i></button>  </div>
 <div class="container">
     <div class="_bDiscount">
-    <div class="card">
-        <div class="card-image">
-            <img src="images/placeholders/370x295.svg" alt="">
-          <div class="shopping-cart-icon">
-            <i class="fa-regular fa-cart-plus"></i>
-          </div>
-        </div>
-      
-        <div class="card-body">
-          <h5 class="card-title">Apple Watch Series</h5>
-          <p>Best dress for everyone ed totam velit risus viverra 
-            nobis donec recusandae perspiciatis incididuno</p>
-          <h4 class="card-price">€30:00</h4>
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-        </div>
-      </div>
       <div class="card">
         <div class="card-image">
-            <img src="images/placeholders/370x295.svg" alt="">
+          <img src="images/placeholders/370x295.svg" alt="">
           <div class="shopping-cart-icon">
             <i class="fa-regular fa-cart-plus"></i>
           </div>
+         
         </div>
       
         <div class="card-body">
           <h5 class="card-title">Apple Watch Series</h5>
           <p>Best dress for everyone ed totam velit risus viverra 
             nobis donec recusandae perspiciatis incididuno</p>
-          <h4 class="card-price">€30:00</h4>
+          <div class="posts">
+            <h4>POSTS BY: ADMIN</h4>
+            <h4>COMMENTS 13</h4>
+          </div>
+         
           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
       </div>
@@ -396,7 +394,32 @@
           <h5 class="card-title">Apple Watch Series</h5>
           <p>Best dress for everyone ed totam velit risus viverra 
             nobis donec recusandae perspiciatis incididuno</p>
-          <h4 class="card-price">€30:00</h4>
+          <div class="posts">
+            <h4>POSTS BY: ADMIN</h4>
+            <h4>COMMENTS 13</h4>
+          </div>
+         
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="images/placeholders/370x295.svg" alt="">
+          <div class="shopping-cart-icon">
+            <i class="fa-regular fa-cart-plus"></i>
+          </div>
+         
+        </div>
+      
+        <div class="card-body">
+          <h5 class="card-title">Apple Watch Series</h5>
+          <p>Best dress for everyone ed totam velit risus viverra 
+            nobis donec recusandae perspiciatis incididuno</p>
+          <div class="posts">
+            <h4>POSTS BY: ADMIN</h4>
+            <h4>COMMENTS 13</h4>
+          </div>
+         
           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
       </div>
@@ -410,8 +433,10 @@
 <section class="subscribe">
 <div class="container">
     <form action="">
-        <input class="mail-text" type="email" placeholder="Enter your mail here">
+        <input class="mail-text" type="email" placeholder="Your mail here">
+        <input class="mail-text-m" type="email" placeholder="subcribe mail here...">
         <button class="s_button" type="submit">SUBSCRIBE FOR NEWSLETTER</button>
+        <button class="s_button-m" type="submit"><i class="fa-duotone fa-paper-plane"></i> SUBSCRIBE</button>
         
     </form>
 </div>

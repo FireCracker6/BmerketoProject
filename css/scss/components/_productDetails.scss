@@ -1,53 +1,101 @@
-.no-gutters {
-    --bs-gutter-x: 0 !important;
-  }
+
   .product-detail-section {
    display: block;
     justify-content: center;
 
     .container {
         display: block;
+    
         justify-content: center;
+   
 
+        @include md {
+            width: 100vw;
+            display: block;
+           
+        }
         @include lg {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             justify-content: space-between;
+            width: 100%;
+           padding: 0;
+          
+           
+          
         
          
         }
     }
     .grid-container {
-        display: flex;
-        margin: 0;
+        display: grid;
+        justify-content: center;
+        @include md {
+            margin: 0 0 0 0;
+            justify-content: center;
+        }
+        @include lg {
+           margin: 0 0 0 0;
+           padding: 0;
+            justify-content: space-between;
+        }
    
         
     }
     .product-detail-description {
-        margin-top: 25px;
 
+
+      .prod-desc-1 {
+        display: block;
       
+        width: 100%;
+        justify-content: center;
+
+      @include mobile {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+       
+      
+      
+       p {
+        margin-bottom: 30px;
+        border-bottom: 1px solid $color-dark-5;
+       }
+ 
+      }
         h2 {
             font-family: $font-poppins;
             font-size: 24px;
             color:$color-dark-2;
+           
+            @include mobile {
+                margin-top: 20px;
+               
+                font-size: 20px;
+              
+            }
+            @include md {
+                margin-top: 20px;
+                margin-left: 0 !important;
+            }
         }
         h3 {
             font-family: $font-poppins;
             font-size: 24px;
             color:$color-dark-2;
             font-weight: $font-weight-semibold;
+            margin-top: 10px;
         }
-        p {
-            max-width: 500px;
-        }
+       
+      
         .text-theme {
             color: $color-yellow;
             span {
                 color: $color-dark-3;
             }
         }
-       
+      
           
         
 
@@ -141,15 +189,52 @@
             }
         }
     }
+    .prod-images-container {
+      display: none;
+      @include mobile {
+        display: block;
+          width: 100vw;
+          overflow-x: hidden;
+          padding-left: 10px;
+          padding-right:10px;
+        } 
+       @include md {
+        display: block;
+          width: 100vw;
+          overflow-x: hidden;
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+        @include lg {
+            width: 100%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-gap: 15px;
+            padding-left: 0;
+            padding-right: 0;
+            }
+    }
     .prod-images {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(1, 1fr);
         grid-gap: 15px;
+        width: 100%;
 
+       @include md {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 15px;
+        justify-content: space-between;
+       }
+
+       @include lg {
+        justify-content: space-between;
+        }
         .item-1 {
             grid-row: 1 /1;
-            grid-column: 1 /-1;
+            grid-column: 1 / -1;
 
             img {
                 width: 100%;
@@ -160,6 +245,7 @@
         }
         .item-2, .item-3, .item-4, .item-5 {
             grid-row: 2 /2;
+        
           
             img {
                 width: 100%;
@@ -167,9 +253,19 @@
                 -o-object-fit: cover;
                    object-fit: cover;
             }
+
+          
+
+         
         }
+       
+
+          
+     
       
     }
+
+ 
     .share {
         display: block;
 
@@ -194,10 +290,15 @@
     .container {
     
         display: block;
-       // justify-content: center;
+        max-width: 1;
+        justify-content: center;
        .tab-content {
         h5 {
             margin-top: 20px;
+
+            @include mobile {
+                margin: 10px;
+            }
         }
       
     }
@@ -218,7 +319,11 @@
           
             .nav {
               display: flex;
+
+              @include md {
              
+                justify-content: space-between;
+              }
               @include lg {
                 justify-content: space-between;
               }
@@ -230,6 +335,12 @@
                 border-left: 1px solid $color-dark-4;
                 text-align: center;
 
+                @include md {
+                    
+                    border-radius: 0;
+                flex-grow: 1;
+                    
+                }
                 @include lg {
                     border-radius: 0;
                 flex-grow: 1;
@@ -239,15 +350,16 @@
                 &:focus,
                 &.active-tab,
                 &.active {
-                  background-color: red;
+                  background-color: $color-theme-1;
                   color: $color-white;
+                  outline: none;
                 }
 
             color: black;
              
              &:hover {
-                background-color: $color-dark-1;
-                color: $color-dark-4;
+                background-color: $color-theme-1;
+                color: $color-white;
              }
            
            
@@ -257,7 +369,15 @@
                button:nth-child(2), button:nth-child(4) {
                 display: none;
                }
-
+               @include md {
+                button:nth-child(2), button:nth-child(4) {
+                    display: block;
+                  
+                   }
+                   button:nth-child(3) {
+                    border-right: none;
+                }
+               }
                @include lg {
                 button:nth-child(2), button:nth-child(4) {
                     display: block;
@@ -277,17 +397,30 @@
             }
       
         .product-content-info {
-            display: grid;
+            display: flex;
             justify-content: space-between;
+       
+         
          
             @include lg {
-                grid-template-columns: repeat(2, 1fr);
-                justify-content: space-between;
+              
+              
+                width: 100%;
+                margin: 0 !important;
+            }
+            .info {
+               p {
+                margin-left: 0;
+
+                @include mobile {
+                    margin: 10px;
+                }
+               }
             }
 
             .product-info-image {
-               
-                padding: 20px;
+               grid-column: 2 /2;
+                padding-left: 20px;
                 img {
                   
                     display: none;
