@@ -597,6 +597,15 @@ header .toggle {
     display: none;
   }
 }
+._collection .loadmore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
 
 ._discount {
   background-color: #FAEFEF;
@@ -937,6 +946,14 @@ header .toggle {
   display: grid;
   grid-auto-flow: column;
   gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+._topSelling .arrowslide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
